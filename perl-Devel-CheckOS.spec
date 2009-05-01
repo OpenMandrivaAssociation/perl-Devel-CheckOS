@@ -1,6 +1,6 @@
 
 %define realname   Devel-CheckOS
-%define version    1.50
+%define version    1.61
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
