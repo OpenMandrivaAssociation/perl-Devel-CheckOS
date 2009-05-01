@@ -14,8 +14,8 @@ Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(File::Find::Rule)
-BuildRequires: perl(File::Temp)
 BuildRequires: perl(Test::More)
+BuildRequires: perl-File-Temp
 
 BuildArch: noarch
 
