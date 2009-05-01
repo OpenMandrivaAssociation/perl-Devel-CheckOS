@@ -13,6 +13,7 @@ Source:     http://www.cpan.org/modules/by-module/Devel/%{realname}-%{version}.t
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
+BuildRequires: perl(Data::Compare)
 BuildRequires: perl(File::Find::Rule)
 BuildRequires: perl(Test::More)
 BuildRequires: perl-File-Temp
