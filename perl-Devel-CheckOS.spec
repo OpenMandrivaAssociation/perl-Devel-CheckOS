@@ -11,7 +11,7 @@ Url:        http://search.cpan.org/dist/%{upstream_name}
 Source:     http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires: perl(Data::Compare)
 BuildRequires: perl(File::Find::Rule)
-BuildRequires: perl(File::Temp)
+BuildRequires: perl(File::Temp) >= 0.190.0
 BuildRequires: perl(Test::More)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
