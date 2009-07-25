@@ -1,39 +1,35 @@
+%define upstream_name       Devel-CheckOS
+%define upstream_version    1.61
 
-%define realname   Devel-CheckOS
-%define version    1.61
-%define release    %mkrel 1
-
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 2
+Summary:    Check what OS we're running on
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    Check whether
-Source:     http://www.cpan.org/modules/by-module/Devel/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires: perl(Data::Compare)
 BuildRequires: perl(File::Find::Rule)
+BuildRequires: perl(File::Temp)
 BuildRequires: perl(Test::More)
-BuildRequires: perl-File-Temp
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
+A learned sage once wrote on IRC:
+
+   $^O is stupid and ugly, it wears its pants as a hat
+
 Devel::CheckOS provides a more friendly interface to $^O, and also lets you
 check for various OS "families" such as "Unix", which includes things like
 Linux, Solaris, AIX etc.
 
-
-
-
-
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
-yes | %{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -49,10 +45,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc CHANGES README
-%{_mandir}/man1/*
+%{_bindir}/use-devel-assertos
+%{_mandir}/man1/use-devel-assertos.1*
 %{_mandir}/man3/*
-%perl_vendorlib/*
-/usr/bin/use-devel-assertos
-
-
-
+%{perl_vendorlib}/Devel
