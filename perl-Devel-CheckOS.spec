@@ -1,14 +1,13 @@
 %define upstream_name       Devel-CheckOS
-%define upstream_version 1.64
-
+%define upstream_version 1.71
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.71
+Release:	1
 Summary:	Check what OS we're running on
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source:		http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
+Source:		http://www.cpan.org/modules/by-module/Devel/Devel-CheckOS-1.71.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Data::Compare)
@@ -40,7 +39,7 @@ make test
 %makeinstall_std
 
 %files
-%doc CHANGES README
+%doc README
 %{_bindir}/use-devel-assertos
 %{_mandir}/man1/use-devel-assertos.1*
 %{_mandir}/man3/*
@@ -73,4 +72,5 @@ make test
 
 * Tue Jan 13 2009 cpan2dist 1.50-1mdv
 - initial mdv release, generated with cpan2dist
+
 
