@@ -1,4 +1,5 @@
 removed_sources:
   Devel-CheckOS-1.64.tar.gz: 3cff5466d2aa4622fbff193d3cae4ba1bb74e622
-sources:
   Devel-CheckOS-1.71.tar.gz: 01b53b486843efdda62077cc3425f062f8d54efe
+sources:
+  Devel-CheckOS-1.72.tar.gz: 2a8cc6724e61d45f6e0b79132d5c05fee6abb665

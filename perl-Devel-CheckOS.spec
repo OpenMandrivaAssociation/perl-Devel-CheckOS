@@ -1,13 +1,14 @@
 %define upstream_name       Devel-CheckOS
-%define upstream_version 1.71
+%define upstream_version 1.72
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 1.71
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 Summary:	Check what OS we're running on
+
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source:		http://www.cpan.org/modules/by-module/Devel/Devel-CheckOS-1.71.tar.gz
+Source:		http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Data::Compare)
@@ -45,32 +46,5 @@ make test
 %{_mandir}/man3/*
 %{perl_vendorlib}/Devel
 
-
-%changelog
-* Thu Apr 28 2011 Guillaume Rousse <guillomovitch@mandriva.org> 1.640.0-1mdv2011.0
-+ Revision: 659911
-- update to new version 1.64
-
-* Wed Jul 14 2010 Jérôme Quelin <jquelin@mandriva.org> 1.630.0-1mdv2011.0
-+ Revision: 553120
-- update to 1.63
-
-* Sat Jul 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.610.0-2mdv2010.0
-+ Revision: 399800
-- use %%perl_version macro
-
-* Fri May 01 2009 Jérôme Quelin <jquelin@mandriva.org> 1.61-1mdv2010.0
-+ Revision: 369726
-- add missing prereq
-- forcing mdv pkg, since file::temp is a dual-lifed pelr pkg
-- update to new version 1.61
-
-* Tue Jan 13 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50-1mdv2009.1
-+ Revision: 329061
-- import perl-Devel-CheckOS
-
-
-* Tue Jan 13 2009 cpan2dist 1.50-1mdv
-- initial mdv release, generated with cpan2dist
 
 
