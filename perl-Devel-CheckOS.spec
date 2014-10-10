@@ -2,7 +2,7 @@
 %define upstream_version 1.72
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 Summary:	Check what OS we're running on
 
 License:	GPL or Artistic
