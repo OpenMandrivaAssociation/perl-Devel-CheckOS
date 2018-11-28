@@ -1,8 +1,8 @@
 %define upstream_name       Devel-CheckOS
-%define upstream_version 1.72
+%define upstream_version 1.81
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 Summary:	Check what OS we're running on
 
 License:	GPL or Artistic
