@@ -1,5 +1,5 @@
 %define upstream_name       Devel-CheckOS
-%define upstream_version 1.81
+%define upstream_version 1.87
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	1
