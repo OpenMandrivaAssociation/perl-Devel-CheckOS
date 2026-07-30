@@ -2,7 +2,7 @@
 %define upstream_version 2.04
 Name:		perl-%{upstream_name}
 Version:	2.04
-Release:	6
+Release:	7
 Summary:	Check what OS we're running on
 
 License:	GPL or Artistic
@@ -32,8 +32,7 @@ Linux, Solaris, AIX etc.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
