@@ -2,7 +2,7 @@
 %define upstream_version 2.04
 Name:		perl-%{upstream_name}
 Version:	2.04
-Release:	26
+Release:	27
 Summary:	Check what OS we're running on
 
 License:	GPL or Artistic
