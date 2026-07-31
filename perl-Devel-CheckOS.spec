@@ -2,7 +2,7 @@
 %define upstream_version 2.04
 Name:		perl-%{upstream_name}
 Version:	2.04
-Release:	50
+Release:	1
 Summary:	Check what OS we're running on
 
 License:	GPL or Artistic
@@ -42,7 +42,7 @@ make test || :
 %makeinstall_std
 
 %files
-%doc README
+%doc CHANGELOG META.yml README TODO
 %{_bindir}/use-devel-assertos
 %{_mandir}/man1/use-devel-assertos.1*
 %{_mandir}/man3/*
